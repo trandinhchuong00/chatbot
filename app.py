@@ -1,5 +1,4 @@
 from chatterbot import ChatBot
-from chatterbot.trainers import ChatterBotCorpusTrainer
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
@@ -9,7 +8,7 @@ chatbot = ChatBot(botname,
 	logic_adapters=[
         {
             'import_path': 'chatterbot.logic.BestMatch',
-            'default_response': 'I am sorry, but I do not understand.',
+            'default_response': 'I have not yet learnt how to answer that',
             'maximum_similarity_threshold': 0.8
         }
     ],
